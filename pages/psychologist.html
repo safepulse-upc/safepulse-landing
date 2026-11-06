@@ -24,45 +24,45 @@
         <p>Monitoreo anónimo y gestión de casos de ciberacoso escolar en tiempo real.</p>
 
         <!-- Tarjetas de métricas -->
-        <section class="metrics-grid" style="display: flex; gap: 15px; margin: 20px 0;">
-            <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow); flex: 1;">
+        <section class="metrics-grid">
+            <div class="metric-card">
                 <h3>Reportes Totales</h3>
-                <p style="font-size: 1.8rem; font-weight: bold; color: var(--primary-color);">12</p>
+                <p class="metric-value primary">12</p>
             </div>
-            <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow); flex: 1;">
+            <div class="metric-card">
                 <h3>Casos Atendidos</h3>
-                <p style="font-size: 1.8rem; font-weight: bold; color: var(--secondary-color);">9</p>
+                <p class="metric-value secondary">9</p>
             </div>
-            <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow); flex: 1;">
+            <div class="metric-card">
                 <h3>Urgencia Alta</h3>
-                <p style="font-size: 1.8rem; font-weight: bold; color: var(--danger-color);">3</p>
+                <p class="metric-value danger">3</p>
             </div>
         </section>
 
         <!-- Tabla de reportes -->
-        <section class="table-container" style="background: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow);">
+        <section class="table-container">
             <h2>Reportes Recientes</h2>
-            <table style="width: 100%; border-collapse: collapse; margin-top: 15px; text-align: left;">
+            <table class="data-table">
                 <thead>
-                    <tr style="border-bottom: 2px solid #ddd;">
-                        <th style="padding: 10px;">ID</th>
-                        <th style="padding: 10px;">Tipo de Incidencia</th>
-                        <th style="padding: 10px;">Nivel de Riesgo</th>
-                        <th style="padding: 10px;">Estado</th>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tipo de Incidencia</th>
+                        <th>Nivel de Riesgo</th>
+                        <th>Estado</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr style="border-bottom: 1px solid #eee;">
-                        <td style="padding: 10px;">#041</td>
-                        <td style="padding: 10px;">Hostigamiento en redes sociales</td>
-                        <td style="padding: 10px; color: var(--danger-color); font-weight: bold;">Alto</td>
-                        <td style="padding: 10px;"><span style="background: #fef08a; padding: 3px 8px; border-radius: 4px;">Pendiente</span></td>
+                    <tr>
+                        <td>#041</td>
+                        <td>Hostigamiento en redes sociales</td>
+                        <td class="risk-high">Alto</td>
+                        <td><span class="badge badge-warning">Pendiente</span></td>
                     </tr>
-                    <tr style="border-bottom: 1px solid #eee;">
-                        <td style="padding: 10px;">#040</td>
-                        <td style="padding: 10px;">Suplantación de identidad</td>
-                        <td style="padding: 10px; color: #eab308; font-weight: bold;">Medio</td>
-                        <td style="padding: 10px;"><span style="background: #bbf7d0; padding: 3px 8px; border-radius: 4px;">Atendido</span></td>
+                    <tr>
+                        <td>#040</td>
+                        <td>Suplantación de identidad</td>
+                        <td class="risk-medium">Medio</td>
+                        <td><span class="badge badge-success">Atendido</span></td>
                     </tr>
                 </tbody>
             </table>
