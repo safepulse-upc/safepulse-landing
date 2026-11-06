@@ -7,24 +7,43 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    
+    <!-- Barra de navegación con rutas corregidas para archivos dentro de la carpeta "pages" -->
     <header>
         <nav>
             <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="pages/report.html">Reportar</a></li>
-            <li><a href="pages/psychologist.html">Panel</a></li>
-            <li><a href="pages/resources.html">Ayuda</a></li>
-            <li><a href="pages/about.html">Nosotros</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="report.html">Reportar</a></li>
+                <li><a href="psychologist.html">Panel</a></li>
+                <li><a href="resources.html">Ayuda</a></li>
+                <li><a href="about.html">Nosotros</a></li>
             </ul>
         </nav>
     </header>
 
-    <h1>Líneas de Ayuda y Contención</h1>
-    <p>Si necesitas hablar con un especialista, comunícate aquí:</p>
-    <ul>
-        <li>Línea 100 - Ministerio de la Mujer</li>
-        <li>Psicólogo escolar de turno</li>
-    </ul>
+    <!-- Sección de las tarjetas -->
+    <main>
+        <h1>Directorio de Recursos y Apoyo Emocional</h1>
+        <p>Servicios de ayuda confidencial y gratuita disponibles las 24 horas.</p>
+
+        <div class="cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+            <article class="resource-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: var(--shadow);">
+                <h3>Línea 100 (MIMP)</h3>
+                <p>Servicio gratuito de información, orientación y soporte emocional para víctimas de violencia o acoso.</p>
+                <a href="tel:100" class="btn" style="display: inline-block; margin-top: 15px; text-decoration: none;">Llamar gratis al 100</a>
+            </article>
+
+            <article class="resource-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: var(--shadow);">
+                <h3>Chat 100</h3>
+                <p>Atención psicológica por medio de chat en tiempo real para situaciones de riesgo o violencia digital.</p>
+                <a href="https://chat100.mimp.gob.pe/" target="_blank" rel="noopener noreferrer" class="btn" style="background: var(--secondary-color); display: inline-block; margin-top: 15px; text-decoration: none;">Acceder al Chat</a>
+            </article>
+
+            <article class="resource-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: var(--shadow);">
+                <h3>Psicología Escolar SafePulse</h3>
+                <p>Atención interna del departamento de orientación de la institución educativa.</p>
+                <a href="psychologist.html" class="btn" style="background: #475569; display: inline-block; margin-top: 15px; text-decoration: none;">Consultar Horarios</a>
+            </article>
+        </div>
+    </main>
 </body>
 </html>

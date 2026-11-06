@@ -1,11 +1,43 @@
-# SafePulse - Landing Page & Dashboard
+# SafePulse - Plataforma de Contención Emocional y Clima Escolar 🛡️
 
-Plataforma digital enfocada en la contención emocional y el monitoreo del clima escolar para adolescentes en Perú. Desarrollado como parte del TB2 de Ingeniería de Sistemas de Información (UPC).
+![GitHub Pages Deployment](https://img.shields.io/badge/Status-Live-success?style=for-the-badge)
+![Proyecto UPC](https://img.shields.io/badge/UPC-Ingenier%C3%ADa%20de%20Sistemas-blue?style=for-the-badge)
 
-## 🚀 Tecnologías
-* HTML5 (Semántico)
-* CSS3 (Grid, Flexbox, Mobile-First)
-* Vanilla JavaScript (ES6)
+SafePulse es una solución web diseñada para la contención emocional de adolescentes frente a situaciones de ciberacoso escolar. Permite realizar denuncias anónimas, acceder a ejercicios interactivos de descompresión emocional y brinda a los psicólogos un panel de monitoreo de casos.
 
-## 📁 Estructura
-El proyecto sigue el estándar de separación de intereses (SoC), dividiendo estructura, estilos y lógica en las carpetas `/css`, `/js`, y `/pages`.
+🌐 **Landing Page Oficial:** [https://safepulse-upc.github.io/safepulse-landing/](https://safepulse-upc.github.io/safepulse-landing/)
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+- **HTML5 Semántico:** Estructuración accesible y compatible con lectores de pantalla.
+- **CSS3 (Mobile-First):** Diseño adaptable con Flexbox, CSS Grid y variables globales WCAG AA.
+- **Vanilla JavaScript (ES6+):** Lógica interactiva de respiración guiada y manipulación del DOM sin dependencias externas.
+
+---
+
+## 📂 Arquitectura del Proyecto
+
+```text
+safepulse-landing/
+├── assets/
+│   ├── fonts/
+│   ├── icons/
+│   ├── images/
+│   └── videos/
+├── css/
+│   └── styles.css
+├── docs/
+├── js/
+│   └── main.js
+├── pages/
+│   ├── about.html
+│   ├── dashboard.html
+│   ├── psychologist.html
+│   ├── report.html
+│   └── resources.html
+├── .gitignore
+├── favicon.ico
+├── index.html
+└── README.md
