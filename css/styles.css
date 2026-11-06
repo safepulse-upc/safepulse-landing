@@ -40,17 +40,50 @@ button:active, .btn:active {
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: Arial, sans-serif; background-color: #f4f7f6; color: #333; line-height: 1.6; }
 
-/* Navegación */
-header nav ul { display: flex; gap: 15px; list-style: none; padding: 15px; background: #2c3e50; }
-header nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+/* Navegación (Mobile-First con Flexbox) */
+header {
+    background-color: var(--card-bg); /* Usamos el fondo blanco de tus variables */
+    box-shadow: var(--shadow); /* Agregamos una ligera sombra para separarlo del contenido */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav ul { 
+    display: flex; /* Define el contenedor como Flexbox */
+    flex-wrap: wrap; /* Permite que los enlaces bajen de línea en pantallas muy estrechas */
+    justify-content: center; /* Centra los elementos en el eje principal */
+    gap: 10px; 
+    list-style: none; 
+    padding: 15px; 
+}
+
+header nav ul li a { 
+    color: var(--dark-text); /* Aplicamos tu variable de texto oscuro para contraste WCAG AA */
+    text-decoration: none; 
+    font-weight: bold; 
+    padding: 8px 12px; /* Aplicamos el Box Model (Padding) para ampliar el área táctil */
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Pseudo-selector para interacción visual (cambio de estado) */
+header nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
 
 /* Contenedores (Mobile First) */
 main, section, form { padding: 20px; width: 100%; }
 input, textarea, button { width: 100%; margin-top: 10px; padding: 10px; border-radius: 5px; }
-button { background: #3498db; color: white; border: none; cursor: pointer; }
+button { background: var(--primary-color); color: white; border: none; cursor: pointer; }
 
-/* Pantallas de Escritorio (Tablets y PC) */
+/* Pantallas de Escritorio (Tablets y PC) usando Media Queries */
 @media (min-width: 768px) {
-    header nav ul { justify-content: center; gap: 30px; }
+    header nav ul { 
+        justify-content: flex-end; /* En escritorio, movemos el menú a la derecha */
+        gap: 20px; 
+        padding: 15px 40px;
+    }
     form, section { max-width: 600px; margin: 0 auto; }
 }
