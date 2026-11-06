@@ -8,14 +8,16 @@
 </head>
 <body>
     <h1>Reporte Seguro y Confidencial</h1>
-    <form>
-        <label>
-            <input type="checkbox" id="anonimo"> Enviar de forma anónima
-        </label>
-        <br><br>
-        <textarea placeholder="Describe la situación de ciberacoso..."></textarea>
-        <br><br>
-        <button type="submit">Enviar Reporte</button>
-    </form>
+    <form id="formularioReporte">
+    <label for="anonimo">
+        <input type="checkbox" id="anonimo"> Enviar de forma anónima
+    </label>
+    <br><br>
+    <label for="descripcion">Detalle de la situación:</label>
+    <textarea id="descripcion" placeholder="Describe la situación de ciberacoso..." required></textarea>
+    <br><br>
+    <button type="submit" aria-label="Enviar reporte de ciberacoso">Enviar Reporte</button>
+</form>
+<p id="mensajeExito" style="display:none; color: green; font-weight: bold;">¡Reporte enviado de forma segura!</p>
 </body>
 </html>
