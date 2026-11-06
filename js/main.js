@@ -1,13 +1,33 @@
 // --- CÓDIGO DE EDWART: Formulario de Reportes ---
 const formReporte = document.getElementById('formularioReporte');
+const descripcionInput = document.getElementById('descripcion');
+const mensajeExito = document.getElementById('mensajeExito');
+
 if (formReporte) {
     formReporte.addEventListener('submit', function(event) {
-        event.preventDefault(); // Evita que la página recargue
-        document.getElementById('mensajeExito').style.display = 'block';
-        formReporte.reset(); // Limpia el formulario
+        // Prevenimos el envío automático
+        event.preventDefault(); 
+
+        // Extraemos el valor eliminando espacios en blanco a los extremos
+        const textoDescripcion = descripcionInput.value.trim();
+
+        // Validación: Asegurar que la descripción tenga al menos 10 caracteres
+        if (textoDescripcion.length < 10) {
+            alert("Por favor, detalla un poco más la situación (mínimo 10 caracteres) para poder ayudarte mejor.");
+            descripcionInput.focus(); // Retorna el cursor al campo de texto
+            return; // Detiene la ejecución aquí
+        }
+
+        // Si pasa la validación, mostramos el éxito y limpiamos
+        mensajeExito.style.display = 'block';
+        formReporte.reset();
+
+        // Ocultamos el mensaje visualmente después de 5 segundos
+        setTimeout(() => {
+            mensajeExito.style.display = 'none';
+        }, 5000);
     });
 }
-
 
 // --- CÓDIGO DE ALEXANDER: Ejercicio de Respiración ---
 const btnRespirar = document.getElementById('btnRespirar');
