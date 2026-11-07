@@ -23,11 +23,17 @@
     <h1>Bienvenido a SafePulse</h1>
     <p>Plataforma web para contención emocional y reporte de ciberacoso escolar.</p>
 
-    <section id="contencion">
+    <section id="contencion" style="text-align: center;">
         <h2>Zona de Calma y Respiración</h2>
         <p>Inhala, mantén y exhala para reducir la ansiedad escolar.</p>
+
+        <!-- Nuevo contenedor del círculo animado -->
+        <div class="breathing-container">
+            <div id="circuloRespiracion" class="circle-calm"></div>
+        </div>
+
         <button id="btnRespirar" aria-label="Iniciar ejercicio de respiración guiada">Iniciar Ejercicio</button>
-        <p id="textoRespiracion" style="font-size: 1.2rem; font-weight: bold; margin-top: 15px;"></p>
+        <p id="textoRespiracion" style="font-size: 1.2rem; font-weight: bold; margin-top: 15px; min-height: 30px;"></p>
     </section>
 
     <script src="js/main.js"></script>

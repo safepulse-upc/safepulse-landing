@@ -29,23 +29,47 @@ if (formReporte) {
     });
 }
 
-// --- CÓDIGO DE ALEXANDER: Ejercicio de Respiración ---
+// --- 1. INDICADOR DE NAVEGACIÓN ACTIVA ---
+// Obtenemos el nombre del archivo actual (ej. 'report.html' o 'index.html')
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+const navLinks = document.querySelectorAll('header nav ul li a');
+
+navLinks.forEach(link => {
+    const linkPage = link.getAttribute('href').split('/').pop();
+    // Comparamos y aplicamos la clase 'active' definida en el CSS
+    if (linkPage === currentPage) {
+        link.classList.add('active');
+    }
+});
+
+
+// --- 2. CÓDIGO DE ALEXANDER: Ejercicio de Respiración Animado ---
 const btnRespirar = document.getElementById('btnRespirar');
 const textoRespiracion = document.getElementById('textoRespiracion');
+const circulo = document.getElementById('circuloRespiracion'); // Capturamos el círculo
 
-if (btnRespirar) {
+if (btnRespirar && circulo) {
     btnRespirar.addEventListener('click', function() {
         btnRespirar.disabled = true;
+
+        // FASE 1: Inhalar (Expansión)
         textoRespiracion.innerText = "Inhala profundamente... (4s)";
-        
+        circulo.classList.add('inhale');
+        circulo.classList.remove('exhale');
+
+        // FASE 2: Mantener (Pausa sostenida)
         setTimeout(() => {
             textoRespiracion.innerText = "Mantén la respiración... (4s)";
         }, 4000);
         
+        // FASE 3: Exhalar (Contracción)
         setTimeout(() => {
             textoRespiracion.innerText = "Exhala lentamente... (4s)";
+            circulo.classList.add('exhale');
+            circulo.classList.remove('inhale');
         }, 8000);
         
+        // FINALIZAR
         setTimeout(() => {
             textoRespiracion.innerText = "¡Muy bien! Puedes repetirlo si lo necesitas.";
             btnRespirar.disabled = false;
