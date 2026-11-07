@@ -5,49 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafePulse - Inicio</title>
     <link rel="stylesheet" href="css/styles.css">
-
-<meta name="description" content="SafePulse: Plataforma digital de contención emocional y prevención del ciberacoso para adolescentes.">
-
+    <meta name="description" content="SafePulse: Plataforma digital de contención emocional y prevención del ciberacoso para adolescentes.">
 </head>
 <body>
 
     <header>
         <nav>
             <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="pages/report.html">Reportar</a></li>
-            <li><a href="pages/psychologist.html">Panel</a></li>
-            <li><a href="pages/resources.html">Ayuda</a></li>
-            <li><a href="pages/about.html">Nosotros</a></li>
-            <li><button id="btnTema" class="btn btn-dark" style="padding: 6px 12px; margin: 0; font-size: 1rem;" aria-label="Cambiar tema visual">🌙</button></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/report.html">Reportar</a></li>
+                <li><a href="pages/psychologist.html">Panel</a></li>
+                <li><a href="pages/resources.html">Ayuda</a></li>
+                <li><a href="pages/about.html">Nosotros</a></li>
+                <li><button id="btnTema" class="btn btn-dark" style="padding: 6px 12px; margin: 0; font-size: 1rem;" aria-label="Cambiar tema visual">🌙</button></li>
             </ul>
         </nav>
     </header>
 
-    <h1>Bienvenido a SafePulse</h1>
-    <p>Plataforma web para contención emocional y reporte de ciberacoso escolar.</p>
-
-    <section id="contencion" style="text-align: center;">
-        <h2>Zona de Calma y Respiración</h2>
-        <p>Inhala, mantén y exhala para reducir la ansiedad escolar.</p>
-
-        <!-- Nuevo contenedor del círculo animado -->
-        <div class="breathing-container">
-            <div id="circuloRespiracion" class="circle-calm"></div>
-        </div>
-
-        <button id="btnRespirar" aria-label="Iniciar ejercicio de respiración guiada">Iniciar Ejercicio</button>
-        <p id="textoRespiracion" style="font-size: 1.2rem; font-weight: bold; margin-top: 15px; min-height: 30px;"></p>
-    </section>
-
-    <script src="js/main.js"></script>
-    
     <main>
-</main>
+        <h1>Bienvenido a SafePulse</h1>
+        <p>Plataforma web para contención emocional y reporte de ciberacoso escolar.</p>
+
+        <section id="contencion" style="text-align: center;">
+            <h2>Zona de Calma y Respiración</h2>
+            <p>Inhala, mantén y exhala para reducir la ansiedad escolar.</p>
+
+            <div class="breathing-container">
+                <div id="circuloRespiracion" class="circle-calm"></div>
+            </div>
+
+            <button id="btnRespirar" aria-label="Iniciar ejercicio de respiración guiada">Iniciar Ejercicio</button>
+            <p id="textoRespiracion" style="font-size: 1.2rem; font-weight: bold; margin-top: 15px; min-height: 30px;"></p>
+        </section>
+    </main>
 
     <footer>
-    <p>Proyecto SafePulse - Grupo 5 (UPC) 2026</p>
-</footer>
+        <p>Proyecto SafePulse - Grupo 5 (UPC) 2026</p>
+    </footer>
+
+    <!-- Se añadió 'defer' para optimizar el Speed Index y rendimiento -->
+    <script src="js/main.js" defer></script>
     
 </body>
 </html>
