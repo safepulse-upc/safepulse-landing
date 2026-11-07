@@ -38,8 +38,20 @@ button:active, .btn:active {
 
 /* Reset básico y variables */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: Arial, sans-serif; background-color: #f4f7f6; color: #333; line-height: 1.6; }
+/* Tema Oscuro */
+[data-theme="dark"] {
+    --light-bg: #0f172a;           /* Fondo general oscuro */
+    --card-bg: #1e293b;            /* Fondo de tarjetas oscuro */
+    --dark-text: #f8fafc;          /* Texto claro */
+}
 
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: var(--light-bg, #f4f7f6); 
+    color: var(--dark-text, #333); 
+    line-height: 1.6; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 /* Navegación (Mobile-First con Flexbox) */
 header {
     background-color: var(--card-bg); /* Usamos el fondo blanco de tus variables */
