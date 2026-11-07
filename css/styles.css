@@ -81,10 +81,10 @@ header nav ul li a:hover {
     color: #ffffff;
 }
 
-/* Indicador de Navegación Activa (Contraste WCAG AA garantizado con texto blanco) */
 header nav ul li a.active {
-    background-color: var(--primary-color);
+    background-color: #014f86; /* Azul marino más oscuro y profundo */
     color: #ffffff;
+    font-weight: bold;
 }
 
 /* =================================================
@@ -128,13 +128,13 @@ button:active, .btn:active {
     transform: scale(0.98);
 }
 
-/* Estilo específico para el botón de ejercicio de respiración */
 #btnRespirar {
-    background-color: var(--secondary-color);
-    color: #ffffff;
+    background-color: #0b5e55; /* Verde contención más oscuro para cumplir el ratio WCAG */
+    color: #ffffff !important;
 }
+
 #btnRespirar:hover {
-    background-color: #0f766e;
+    background-color: #084c44;
 }
 
 /* Modificadores de Botones (Clases de Utilidad) */
