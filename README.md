@@ -41,3 +41,7 @@ safepulse-landing/
 ├── favicon.ico
 ├── index.html
 └── README.md
+
+## Equipo de desarrollo
+- Edwart Mathias Estrada Camus
+- Joel Santana
